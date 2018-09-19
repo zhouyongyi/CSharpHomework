@@ -27,6 +27,7 @@ namespace Homework2
                     if (j == i) Console.Write(i + " ");
                 }
             }
+            Console.ReadKey();
         }
     }
 }

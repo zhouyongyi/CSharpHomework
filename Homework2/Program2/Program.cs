@@ -28,6 +28,7 @@ namespace Program2
             Console.WriteLine("数组的最小值为" + nums[0] + " ; ");
             Console.WriteLine("数组的平均值为" + sum / nums.Length + " ;");
             Console.WriteLine("数组的和为" + sum + " ;");
+            Console.ReadKey();
         }
     }
 }
