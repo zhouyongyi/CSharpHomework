@@ -10,6 +10,7 @@ namespace Program3
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("2到100之间的素数为:");
             int N = 100;
             bool[] a = new bool[N + 1];
             for (int i = 2; i <= N; i++)
