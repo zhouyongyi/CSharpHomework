@@ -10,16 +10,16 @@ namespace Program2
     {
         static void Main(string[] args)
         {
-            string inputNUM;
+            string inputNum;
             int sum = 0;
             Console.WriteLine("请输入数字，中间以空格分开");
-            inputNUM = Console.ReadLine();
-            inputNUM = inputNUM.Trim();
-            string[] spiltNUMs = inputNUM.Split(' ');
-            int[] nums = new int[spiltNUMs.Length];
-            for (int i = 0; i < spiltNUMs.Length; i++)
+            inputNum = Console.ReadLine();
+            inputNum = inputNum.Trim();
+            string[] spiltNums = inputNum.Split(' ');
+            int[] nums = new int[spiltNums.Length];
+            for (int i = 0; i < spiltNums.Length; i++)
             {
-                string temp = spiltNUMs[i];
+                string temp = spiltNums[i];
                 sum += int.Parse(temp);
                 nums[i] = int.Parse(temp);
             }

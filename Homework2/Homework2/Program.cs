@@ -10,41 +10,21 @@ namespace Homework2
     {
         static void Main(string[] args)
         {
-            string inputNUM;
-            Console.WriteLine("请输入一个数字");
-            inputNUM = Console.ReadLine();
-            inputNUM = inputNUM.Trim();
-            string[] spiltNUMs = inputNUM.Split(' ');
-            int num = int.Parse(spiltNUMs[0]);
-            List<int> factors = new List<int>();
-            List<int> primefactors = new List<int>();
-            for (int i = 2; i < num + 1; i++)
+            int num = 0;
+            String inputNum = "";
+            Console.WriteLine("请输入一个正整数：");
+            inputNum = Console.ReadLine();
+            num = Int32.Parse(inputNum);
+            Console.Write("它的素数因子有：");
+            for (int i = 2; i < num; i++)
             {
                 if (num % i == 0)
                 {
-                    factors.Add(i);
-                }
-            }
-            Console.Write("素数因子有 ");
-            foreach (int ele in factors)
-            {
-                int j = (int)Math.Ceiling(Math.Sqrt(Convert.ToDouble(ele)));
-                int flag = 1;
-                for (int i = 2; i <= j; i++)
-                {
-                    if (ele == 2)
-                    {
-                        continue;
-                    }
-                    if (ele % i == 0)
-                    {
-                        flag = 0;
-                        break;
-                    }
-                }
-                if (Convert.ToBoolean(flag))
-                {
-                    Console.Write(ele + "  ");
+                    int j = 1;
+                    while (++j < i)
+                        if (i % j == 0)  
+                            break;       
+                    if (j == i) Console.Write(i + " ");
                 }
             }
         }
